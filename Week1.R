@@ -23,9 +23,7 @@ for (i in 1:length(dummyL)) {
                                    to=dummyL[[i]]$end[1])[j]
   }
 }
-lookup <-do.call("rbind",dummyL)
-row.names(lookup)<-c()
-
+lookup <-do.call("rbind.fill",dummyL)
 ################### join the data ################### 
 # join
 join  <-merge(x = data,
