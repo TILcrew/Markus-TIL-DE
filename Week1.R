@@ -15,8 +15,6 @@ for (i in 1:nrow(lookup)) {
 dummy <- lookup[rep(seq_len(nrow(lookup)), each=20),]
 # add this f#+#"$%# last line
 dummy <-rbind(dummy,dummy[100,])
-# get rid of this stupid row names
-row.names(dummy)<-c()
 # split it and create correct join indicator
 dummyL   <- split(dummy,f=dummy$Range)
 for (i in 1:length(dummyL)) {
