@@ -15,8 +15,6 @@ for (i in 1:nrow(lookup)) {
   lookup$end[i]     <- as.numeric(substr(as.character(lookup$Range[i]),start = 6,stop = 9))
 }
 
-lookup$end[1]-lookup$start[1]+1
-
 # build new lookup table
 dummy <- lookup[rep(seq_len(nrow(lookup)), each=20),]
 # add this f#+#"$%# last line
