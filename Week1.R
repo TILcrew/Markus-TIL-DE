@@ -1,7 +1,3 @@
-# setting up my working directory
-setwd("C:/Users/Markus/Documents/Markus/Weekly Challenge Alteryx/Week1")
-dir()
-
 library(plyr)
 
 # import both .csv files
