@@ -36,6 +36,7 @@ join    <-join[,c("Region","Sales.Rep","Responder")]
 ###################  summarize it ################### 
 join$ID         <- paste(join$Region,join$Sales.Rep,join$Responder,sep = "-")
 count_result    <- count(join, "ID")
+result          <- subset(join,!duplicated(join$ID))
 result          <- merge(x = result,
                          y = count_result,
                          by = "ID")
